@@ -1,0 +1,14 @@
+#pragma once
+
+#include <core/string/str.h>
+
+namespace bones
+{
+  namespace GL
+  {
+    Str name();
+    Str renderer_name();
+
+    bool load();
+  }
+}

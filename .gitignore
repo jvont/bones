@@ -1,0 +1,5 @@
+.vscode/
+/build*
+
+# uncomment once resources folder becomes too large
+# app/resources/
