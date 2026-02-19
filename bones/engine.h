@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 #include <core/input/input_handler.h>
 #include <core/time/update_loop.h>
 #include <platform/platform.h>
@@ -22,4 +20,3 @@ namespace bones
     void on_exit() override;
   };
 }
->>>>>>> ba1829b803c371f8531676427c576c95be8ffc0d

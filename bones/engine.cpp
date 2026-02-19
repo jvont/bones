@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 #include <core/debug/log.h>
 #include <engine.h>
 
@@ -49,4 +47,3 @@ namespace bones
 
   }
 }
->>>>>>> ba1829b803c371f8531676427c576c95be8ffc0d
