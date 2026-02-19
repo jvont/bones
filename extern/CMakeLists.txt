@@ -1,6 +1,7 @@
-# fetch and link external libraries
+# add stb_image library
+add_subdirectory(stb_image)
 
-# SDL
+# fetch SDL3 library
 FetchContent_Declare(
   SDL
 	GIT_REPOSITORY "git@github.com:libsdl-org/SDL.git"
@@ -8,15 +9,7 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(SDL)
 
-# glad
-FetchContent_Declare(
-  glad
-	GIT_REPOSITORY "git@github.com:Dav1dde/glad.git"
-  GIT_TAG "v2.0.8"
-)
-FetchContent_MakeAvailable(glad)
-
-# ImGui
+# fetch imgui/create cmake library
 FetchContent_Declare(
   imgui
 	GIT_REPOSITORY "git@github.com:ocornut/imgui.git"
@@ -24,10 +17,9 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(imgui)
 
-# create CMake library for imgui
 add_library(imgui STATIC
-  ${imgui_SOURCE_DIR}/backends/imgui_impl_opengl3.cpp
   ${imgui_SOURCE_DIR}/backends/imgui_impl_sdl3.cpp
+  ${imgui_SOURCE_DIR}/backends/imgui_impl_sdlgpu3.cpp
 
   ${imgui_SOURCE_DIR}/imgui_demo.cpp
   ${imgui_SOURCE_DIR}/imgui_draw.cpp
@@ -37,12 +29,5 @@ add_library(imgui STATIC
   ${imgui_SOURCE_DIR}/imgui.cpp
 )
 
-target_include_directories(imgui
-  PUBLIC
-    $<BUILD_INTERFACE:${imgui_SOURCE_DIR}>
-)
-
-target_link_libraries(imgui
-  glad
-  SDL3::SDL3
-)
+target_include_directories(imgui PUBLIC ${imgui_SOURCE_DIR})
+target_link_libraries(imgui PRIVATE SDL3::SDL3)

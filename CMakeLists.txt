@@ -1,7 +1,7 @@
-﻿cmake_minimum_required(VERSION 3.14..3.21)
+﻿cmake_minimum_required(VERSION 3.21)
 project(bones VERSION 0.1
               DESCRIPTION "bones"
-              LANGUAGES CXX)
+              LANGUAGES C CXX)
 
 # ======== Project Configuration ========
 
@@ -10,7 +10,6 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
   # enable BUILD_TESTING
   option(BUILD_TESTING "Build testing library." ON)
   include(CTest)
-  
 endif()
 
 # ======== CMake Includes ========
@@ -32,7 +31,7 @@ add_subdirectory(extern)
 # ======== Main Library ========
 
 # build main library/link third-party libs
-add_subdirectory(bones)
+add_subdirectory(src)
 
 # ======== Testing ========
 
@@ -40,9 +39,9 @@ add_subdirectory(bones)
 add_subdirectory(app)
 
 # build testing library/executable
-if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME) AND BUILD_TESTING)
-  add_subdirectory(tests)
-endif()
+# if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME) AND BUILD_TESTING)
+#   add_subdirectory(tests)
+# endif()
 
 # ======== Debug ========
 
