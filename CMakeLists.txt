@@ -29,11 +29,8 @@ include(configure_submodules)
 
 # ======== Third-Party ========
 
-# initialize git submodules (if needed)
-configure_submodules()
-
 # pull in third-party libraries/submodule directories
-add_subdirectory(thirdparty)
+add_subdirectory(extern)
 
 # ======== Main Library ========
 
