@@ -51,8 +51,7 @@ target_link_libraries(bones
     glad
     imgui
   PRIVATE
-    SDL2main
-    SDL2-static
+    SDL3::SDL3
     stb_image
 )
 

@@ -45,6 +45,4 @@ target_include_directories(imgui
 target_link_libraries(imgui
   glad
   SDL3::SDL3
-  # SDL2main
-  # SDL2-static
 )

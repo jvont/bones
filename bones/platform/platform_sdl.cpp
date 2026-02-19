@@ -267,7 +267,7 @@ namespace bones
   {
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_GAMECONTROLLER) != 0)//SDL_INIT_EVERYTHING) != 0)
     {
-      logerror << "Failed to initialize SDL2: " << SDL_GetError() << logendl;
+      logerror << "Failed to initialize SDL3: " << SDL_GetError() << logendl;
       return;
     }
 
@@ -304,7 +304,7 @@ namespace bones
     while (SDL_PollEvent(&event))
     {
       // dispatch event to dearest imgui
-      // ImGui_ImplSDL2_ProcessEvent(&event);
+      // ImGui_ImplSDL3_ProcessEvent(&event);
 
 #pragma region "Window Events"
       if (event.type == SDL_QUIT)

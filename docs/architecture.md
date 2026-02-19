@@ -15,7 +15,7 @@ Window, audio, and input management; graphics contexts, timers, threading, netwo
 **Implementation:**
 
 - Using native libraries (eg. windows.h, C++ libraries for things like hi-res counters).
-- Realistically using a framework such as SDL2 or glfw3 which handles platform independence for us, along with GL wrappers (such as GLAD).
+- Realistically using a framework such as SDL3 or glfw3 which handles platform independence for us, along with GL wrappers (such as GLAD).
 
 ---
 

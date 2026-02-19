@@ -2,7 +2,7 @@
 
 #define IMGUI_IMPL_OPENGL_LOADER_GLAD
 #include <backends/imgui_impl_opengl3.h>
-#include <backends/imgui_impl_sdl.h>
+#include <backends/imgui_impl_sdl3.h>
 
 namespace bones
 {
@@ -24,7 +24,7 @@ namespace bones
     // io.Fonts->AddFontFromFileTTF("resources/fonts/DroidSans.ttf", 15.0f);
 
     // set platform/renderer bindings
-    ImGui_ImplSDL2_InitForOpenGL(wnd, ctx);
+    ImGui_ImplSDL3_InitForOpenGL(wnd, ctx);
 
     const char* glsl_version = "#version 330";
     ImGui_ImplOpenGL3_Init(glsl_version);
@@ -33,14 +33,14 @@ namespace bones
   ImGuiEditor::~ImGuiEditor()
   {
     ImGui_ImplOpenGL3_Shutdown();
-    ImGui_ImplSDL2_Shutdown();
+    ImGui_ImplSDL3_Shutdown();
     ImGui::DestroyContext();
   }
 
   void ImGuiEditor::render()
   {
     ImGui_ImplOpenGL3_NewFrame();
-    ImGui_ImplSDL2_NewFrame();
+    ImGui_ImplSDL3_NewFrame();
     ImGui::NewFrame();
 
     bool show_demo_window = true;
