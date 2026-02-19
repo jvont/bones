@@ -3,7 +3,7 @@
 
 #include <platform/window.h>
 
-#include <SDL.h>
+#include <SDL3/SDL.h>
 
 namespace bones
 {

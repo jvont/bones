@@ -24,9 +24,6 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 # copy given resources to a target output directory
 include(target_configure_files)
 
-# used to initialize any git submodules
-include(configure_submodules)
-
 # ======== Third-Party ========
 
 # pull in third-party libraries/submodule directories

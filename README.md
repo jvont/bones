@@ -5,9 +5,8 @@ bones is a lightweight C++ game engine
 ## Building
 
 ```shell
-mkdir build && cd build
-cmake -S .. -B . -G Ninja
-cmake --build .
+cmake -S . -B build/ -G Ninja
+cmake --build build/
 ```
 
 running tests (optional):
