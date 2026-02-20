@@ -16,6 +16,7 @@ target_link_libraries(bones
     imgui
   PRIVATE
     SDL3::SDL3
+    SDL3_shadercross::SDL3_shadercross
     stb_image
 )
 

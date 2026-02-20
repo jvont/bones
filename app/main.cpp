@@ -1,8 +1,12 @@
-#include "main.h"
 
-int main()
+#include <bones/main.h>
+
+int bones::setup()
 {
-  bones::run();
-  
+  return 0;
+}
+
+int bones::loop()
+{
   return 0;
 }

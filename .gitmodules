@@ -1,0 +1,9 @@
+[submodule "extern/SDL_shadercross"]
+	path = extern/SDL_shadercross
+	url = git@github.com:libsdl-org/SDL_shadercross.git
+[submodule "extern/SDL"]
+	path = extern/SDL
+	url = git@github.com:libsdl-org/SDL.git
+[submodule "extern/imgui"]
+	path = extern/imgui
+	url = git@github.com:ocornut/imgui.git
